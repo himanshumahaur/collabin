@@ -1,0 +1,44 @@
+<%- include('./partials/header'); %>
+
+<div class="profile">
+    <div class="frame">
+
+        <h2>Client</h2>
+        <div class="left">
+            <img class="avatar" src="../../avatar/avatar5.png">
+            <h4><%=detail.fullname%></h4>
+            <p><%=detail.bio%></p>
+        </div>
+
+        <div class="jobdets right">
+            <h3>Details</h3>
+            <h4>Email</h4>
+            <p><%=user2.email%></p>
+            <h4>Phone</h4>
+            <p><%=detail.phone%></p>
+            <h4>Address</h4>
+            <p>IND</p>
+        </div>
+        
+        <h2>Job</h2>
+        <% job.forEach(j => { %>
+            <% if(j.id==job_id) { %>
+                <div class="onejob">
+                    <div id="jobdethead">
+                        <h4><%=j.title%></h4>
+                        <p>₹<%=j.reward%></p>
+                    </div>
+                </div>
+                <p><%=j.detail%></p>
+            <% }%>
+        <% }) %>
+
+    </div>
+</div>
+
+
+
+
+
+
+<%- include('./partials/footer'); %>

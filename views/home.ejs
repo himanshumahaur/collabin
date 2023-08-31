@@ -1,0 +1,39 @@
+<%- include('./partials/header'); %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <div class="mywallet">
+        <div class="upi frame">
+            <h3>MY WALLET</h3>
+
+            <h4>UPI</h4>
+            <p><%=user.email%></p>
+
+            <h4>Balance</h4>
+            <p id="showbal">₹<%=detail.money%></p>
+            <p id="hidebal">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</p>
+
+
+            <h4>QR</h4>
+            <main>
+                <div id="qrcode"></div>
+            </main>
+
+            <div class="upi-buttons">
+            <button onclick="tglbal()">BALANCE</button>
+            <button>RECHARGE</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var qrcode = new QRCode("qrcode", "<%=user.email%>");
+    
+        function tglbal() {
+            var x = document.getElementById("showbal");
+            var y = document.getElementById("hidebal");
+            x.style.display = "block";
+            y.style.display = "none";
+        }
+    </script>
+
+<%- include('./partials/footer'); %>

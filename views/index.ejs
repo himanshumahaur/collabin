@@ -1,0 +1,39 @@
+<%- include('./partials/header'); %>
+
+    <div class="index">
+        <div class="tiles">
+            <a class="text frame" href="/home">
+            <h3>NOTIFICATIONS</h3>
+            <div class="info">
+                <h2>HURRY!</h2>
+                <p>Octave is a platform for freelancers (marketplace) where you can buy and sell services.</p>
+                <h2>50% OFF</h2>
+                <p>On your first purchase on Octave. Offer valid till stock last. T&C applies.</p>
+                <h2>UPDATE</h2>
+                <p>Octave V1.5</p>
+            </div>
+            </a>
+
+            <a class="wallet frame" href="/home">
+            <h3>WALLET</h3>
+            <img id="wallet-image" src="./wallet.png">
+            </a>
+
+            <div></div>
+
+            <a class="stats frame" href="/jobs">
+            <h3>STATS</h3>
+                <div class="jobcount">
+                    <p>Job Count</p>
+                    <% let count = 0; let cost = 0; job.forEach(e => {if(user.id==e.U_id){cost+=e.reward;  count++;} })%>
+                    <p class="vars"><%=count%></p>
+                </div>
+                <div class="totalreward">
+                    <p>Offered (₹)</p>
+                    <p class="vars"><%=cost%></p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+<%- include('./partials/footer'); %>

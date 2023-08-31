@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* body */
+body {
+    background-image: url('./bg.jpg');
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* header */
+header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+header .left {
+    text-align: left;
+}
+header .left * {
+    font-size: 32px;
+}
+header .cent {
+    font-size: large;
+    text-align: center;
+
+}
+header .cent * {
+    padding: 10px;
+
+}
+header .right {
+    text-align: right;
+}
+header .right a {
+    padding: 10px;
+}
+
+.btn, button {
+    color: darkslategrey;
+    background-color: lightseagreen;
+
+    border: 0;
+    border-radius: 50px;
+
+    padding: 8px;
+    
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover, button:hover {
+    color: white;
+    background-color: darkcyan;
+
+    cursor: pointer;
+}
+
+.nbtn {
+    color: darkslategrey;
+    transition: all 0.3s ease 0s;
+}
+
+.nbtn:hover {
+    color: lightsalmon;
+    cursor: pointer;
+}
+
+.frame {
+    background:rgba(255,255,255, 0.6);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+
+.form label {
+    display: block;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.form input, .form textarea {
+    font-size: 20px;
+
+    display: block;
+    padding: 10px;
+
+    border-radius: 5px;
+    border: 1px solid;
+
+    resize: none;
+}
+
+/* index page */
+.index {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.tiles {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 20px; 
+    grid-template-areas: "text-frame wallet-frame" "text-frame stats-frame";
+}
+
+.tiles a {
+    text-align: center;
+}
+
+.index .text.frame { grid-area: text-frame; }
+.index .wallet.frame { grid-area: wallet-frame; }
+.index .stats.frame { grid-area: stats-frame; }
+
+.index .text.frame, .index .wallet.frame, .index .stats.frame {
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+}
+.index .text.frame:hover, .index .wallet.frame:hover, .index .stats.frame:hover {
+    transform: scale(1.05);
+}
+
+.index .text.frame .info {
+    text-align: left;
+    padding: 20px 40px 0px 40px;
+}
+
+.index #wallet-image {
+    width: 200px;
+}
+
+.index .stats .jobcount, .index .stats .totalreward {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 0px 40px;
+}
+
+.index .stats .vars {
+    font-weight: bold;
+    color: darkcyan;
+}
+
+/* form */
+
+.post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post h3, .post button {
+    display: block;
+}
+
+.post .frame {
+    margin: 20px;
+}
+
+.post .form {
+    width: 760px;
+    margin: 20px;
+
+    display: grid;
+    grid-template-columns: 370px 370px;
+    grid-template-rows: 100px 300px;
+    gap: 20px;
+    grid-template-areas: "title reward" "detail detail";
+
+    justify-items: center;
+    align-items: center;
+}
+.post .title { grid-area: title; }
+.post .reward { grid-area: reward; }
+.post .detail { grid-area: detail; }
+
+.post .form div {
+    width: 100%;
+}
+
+.post .frame h3 {
+    text-align: center;
+}
+.post .frame button {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post .form input {
+    width: 100%;
+}
+.post .form textarea {
+    height: 80%;
+    width: 100%;
+}
+
+.post .form .detail {
+    height: 100%;
+}
+
+/* login signup editpro*/
+.login, .signup, .editpro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .form, .signup .form, .editpro .form {
+    margin-top: 140px;
+    margin-bottom: 120px;
+    padding: 20px;
+}
+
+.login .error, .signup .error {
+    color: salmon;
+    font-size: small;
+    padding: 10px;
+}
+
+.editpro .form button {
+    margin-top: 20px;
+}
+
+/* profile */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile .frame {
+    width: 600px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.profile .frame .left_right h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.profile .left_right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile .left, .profile .right {
+    width: 250px;
+    padding: 20px;
+    display: inline-block;
+}
+
+.profile .left {
+    text-align: center;
+}
+
+.profile .right {
+    text-align: left;
+}
+
+.profile .right * {
+    padding-left: 40px;
+}
+
+.profile .editbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+/* jobs */
+.jobs {
+    display: flex;
+    justify-content: center;
+}
+
+.jobs .left, .jobs .right {
+    height: 100%;
+    margin: 20px;
+}
+
+.jobs .left {
+    text-align: left;
+}
+
+.jobs .left .stats.frame {
+    width: 200px;
+}
+
+.jobs .left .stats.frame {
+    padding: 30px;
+    padding-bottom: 300px;
+}
+
+.jobs .right {
+    width: 400px;
+}
+
+.jobs .right .job.frame {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.jobs .right .job .heading, .jobs .right .job .footing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.jobs .footing button {
+   margin-left: 5px;
+}
+
+
+/* jobdetails */
+.jobdets.right {
+    vertical-align: top;
+}
+.jobdets.right h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#jobdethead {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* wallet */ 
+.mywallet {
+    display: flex;
+    justify-content: center;
+}
+
+.mywallet .upi {
+    width: 350px;
+    padding: 10px 30px 10px 30px;
+    margin: 20px;
+}
+
+.mywallet .upi h3 {
+    text-align: center;
+}
+
+#qrcode img {
+    width: 200px;
+    margin: auto;
+}
+
+.upi-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.upi-buttons * {
+    width: 100px;
+}
+
+.mywallet #showbal {
+    display: none;
+}
+
+.mywallet #hidebal {
+    display: block;
+}
+
+/* footer */
+footer {
+    text-align: center;
+}

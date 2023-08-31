@@ -1,0 +1,29 @@
+<%- include('./partials/header'); %>
+
+<div class="profile">
+    <div class="frame">
+        <div class="left_right">
+            <div class="left">
+                <img class="avatar" src="./avatar/avatar5.png">
+                <h4><%=detail.fullname%></h4>
+                <p><%=detail.bio%></p>
+            </div>
+            <div class="right">
+                <h3>Details</h3>
+                <h4>Email</h4>
+                <p><%=user.email%></p>
+                <h4>Phone</h4>
+                <p><%=detail.phone%></p>
+                <h4>Address</h4>
+                <p>IND</p>
+            </div>
+        </div>
+        
+        <div class="editbtn">
+            <p class="btn"><a href="/editprofile">&nbsp;EDIT&nbsp;</a></p>
+        </div>
+
+    </div>
+</div>
+
+<%- include('./partials/footer'); %>

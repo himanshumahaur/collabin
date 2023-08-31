@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="left">
+        <a id="logo" href="/">OCTAVE</a>
+        </div>
+        <div class="cent">
+            <a class="nbtn" href="/post">Post</a>
+            <a class="nbtn" href="/jobs">Jobs</a>
+            <a class="nbtn" href="#">About</a>
+        </div>
+        <div class="right">
+            <% if (user) { %>
+            <a class="nbtn" href="/profile">Welcome, <%=user.email%></a>
+            <a class="btn" href="/logout">LOG OUT</a>
+            <% } else { %>
+            <a href="/login">LOG IN</a>
+            <a class="btn" href="/signup">SIGN UP</a>
+            <% } %>
+            </div>
+    </header>
+
+    

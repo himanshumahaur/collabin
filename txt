@@ -1,0 +1,18 @@
+.profile .design h2 {
+    text-align: center;
+}
+
+.profile .onejob  {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 30px;
+
+    text-align: left;
+}
+
+.profile .onejob .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
