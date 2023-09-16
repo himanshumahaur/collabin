@@ -16,9 +16,9 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 
 //connect to database then listen
-const dbURI = 'mongodb+srv://zerefco:1234@cluster0.hsyhwkl.mongodb.net/node-auth';
+const dbURI = 'mongodb+srv://admin:admin@main.ynh3grn.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(dbURI)
-    .then((result) => app.listen(3000))
+    .then((result) => app.listen(3002))
     .catch((err) => console.log(err));
 
 app.get('*', checkUser);
