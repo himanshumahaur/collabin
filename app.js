@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 //connect to database then listen
 const dbURI = 'mongodb+srv://admin:admin@main.ynh3grn.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(dbURI)
-    .then((result) => app.listen(3002))
+    .then((result) => app.listen(80))
     .catch((err) => console.log(err));
 
 app.get('*', checkUser);
